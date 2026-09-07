@@ -88,7 +88,7 @@ async def send_main_menu(context, chat_id, user):
     total = statistik.get(str(user.id), {}).get("nominal", 0)
 
     text = (
-        f"👋 Selamat datang di *Store Garfield*!\n\n"
+        f"👋 Selamat datang di *Store MELON*!\n\n"
         f"🧑 Nama: {user.full_name}\n"
         f"🆔 ID: {user.id}\n"
         f"💰 Total Saldo Kamu: Rp{s:,}\n"
@@ -111,7 +111,7 @@ async def send_main_menu(context, chat_id, user):
         await context.bot.send_photo(
             chat_id=chat_id,
             photo=BANNER_URL,
-            caption="🎉 Selamat datang di Store Garfield!",
+            caption="🎉 Selamat datang di Store MELON!",
             parse_mode="Markdown"
         )
     except Exception as e:
@@ -435,15 +435,15 @@ async def handle_info_bot(update: Update, context: CallbackContext):
     q=update.callback_query
     text="""📖 *INFORMASI BOT*
 ╽─────────────────────────────╮
-├ 🧠 *Nama Bot*: `Store GARFIELD`
-├ 👨‍💻 *Author*: [@Brsik23](https://t.me/storegarf)
+├ 🧠 *Nama Bot*: `Store MELON`
+├ 👨‍💻 *Author*: [@Kyaa671](https://t.me/VIPXXXFSID)
 ├ 🛒 *Fungsi*: Penjualan akun digital otomatis
 ├ ⚙️ *Fitur*: Deposit, Pengiriman Akun, Statistik
 ├ 🧰 *Teknologi*: Python, Telegram Bot API
 ╰─────────────────────────────╯
 
 🌐 *Sosial Media Developer:*
-💬 Hubungi [@Brsik23](https://t.me/storegarf)"""
+💬 Hubungi [@Kyaa671](https://t.me/VIPXXXFSID)"""
     kb=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Kembali",callback_data="back_to_produk")]])
     await q.edit_message_text(text,parse_mode="Markdown",disable_web_page_preview=True,reply_markup=kb)
 
@@ -575,7 +575,7 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))          # Pesan biasa
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
 
-    print("🤖 Bot Store Garfield Berjalan!")
+    print("🤖 Bot Store MELON Berjalan!")
     app.run_polling()
 
 if __name__ == "__main__":
